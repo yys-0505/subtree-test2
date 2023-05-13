@@ -9,5 +9,6 @@
 <style scoped>
 .header {
   color: red;
+  background: black;
 }
 </style>
