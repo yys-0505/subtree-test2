@@ -3,7 +3,9 @@
 
 <template>
   <h1 class="header">This is a header112233</h1>
-  <div>abc</div>
+  <h1 class="header">This is a header112233</h1>
+  <h1 class="header">This is a header112233</h1>
+  <h1 class="header">This is a header112233</h1>
 </template>
 
 <style scoped>
