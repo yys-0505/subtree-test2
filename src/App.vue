@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import HelloWorld from './components/HelloWorld.vue'
-import Header from './subtree/components/header.vue'
+import Header from './subtree/src/components/header.vue'
 </script>
 
 <template>
