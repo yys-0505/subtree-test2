@@ -8,6 +8,6 @@
 
 <style scoped>
 .header {
-  color: blue;
+  color: red;
 }
 </style>
