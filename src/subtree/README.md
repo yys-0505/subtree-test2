@@ -47,7 +47,7 @@ git subtree pull --prefix=<存放子项目的相对路径> <子项目git地址> 
 
 例如：
 ```
-git subtree pull --prefix=src/subtree https://github.com/xxx/xxx.git master
+git subtree pull --prefix=src/subtree https://github.com/xxx/xxx.git master --squash
 ```
 
 ## 其他 git subtree split
@@ -60,3 +60,6 @@ git subtree split --prefix=<存放子项目的相对路径> --rejoin
 ```
 git subtree split --prefix=src/subtree --rejoin
 ```
+
+# 注意事项
+- pull subtree之前要commit当前工程的修改
