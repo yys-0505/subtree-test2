@@ -6,7 +6,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "st:add": "git subtree add --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch% --%npm_package_config_st-commit%",
+    "st:pull": "git subtree pull --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch% --%npm_package_config_st-commit%",
+    "st:splitPush": "npm run st:split && npm run st:push",
+    "st:split": "git subtree split --rejoin --prefix=%npm_package_config_st-prefix%  --branch %npm_package_config_st-split-branch%",
+    "st:push": "git push %npm_package_config_st-git% %npm_package_config_st-split-branch%:%npm_package_config_st-branch%"
   },
   "dependencies": {
     "vue": "^3.2.47"
@@ -16,5 +21,12 @@
     "typescript": "^5.0.2",
     "vite": "^4.3.2",
     "vue-tsc": "^1.4.2"
+  },
+  "config": {
+    "st-prefix": "src/subtree",
+    "st-git": "https://github.com/yys-0505/subtree.git",
+    "st-branch": "master",
+    "st-commit": "squash",
+    "st-split-branch": "subtreeSplitBranch"
   }
 }
