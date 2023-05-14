@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <h1 class="header">This is a Header123</h1>
+  <h1 class="header">This is a Header123456</h1>
 </template>
 
 <style scoped>
