@@ -1,0 +1,29 @@
+{
+  "name": "subtree",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "st:add": "git subtree add --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch%",
+    "st:pull": "git subtree pull --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch%",
+    "st:push": "npm run st:split && npm run st:pushSplit",
+    "st:split": "git subtree split --rejoin --prefix=%npm_package_config_st-prefix%  --branch %npm_package_config_st-split-branch%",
+    "st:pushSplit": "git push %npm_package_config_st-git% %npm_package_config_st-split-branch%:%npm_package_config_st-branch%"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yys-0505/subtree.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yys-0505/subtree/issues"
+  },
+  "homepage": "https://github.com/yys-0505/subtree#readme",
+  "config": {
+    "st-prefix": "src/subtree",
+    "st-git": "https://github.com/yys-0505/subtree.git",
+    "st-branch": "master",
+    "st-split-branch": "subtreeSplitBranch"
+  }
+}
