@@ -12,7 +12,7 @@ git subtree add --prefix=src/subtree https://github.com/yys-0505/subtree.git mas
 ## 推送子项目代码 push
 命令：
 ```
-git subtree push --prefix=存放子项目的相对路径 子项目git地址 分支 --squash
+git subtree push --prefix=存放子项目的相对路径 子项目git地址 分支
 ```
 
 例如：
@@ -36,10 +36,10 @@ git subtree pull --prefix=存放子项目的相对路径 子项目git地址 分�
 git subtree pull --prefix=src/subtree https://github.com/yys-0505/subtree.git master --squash
 ```
 
-## 其他 git subtree split
+## git subtree split
 命令：
 ```
-git subtree split --rejoin --prefix=存放子项目的相对路径 --branch temp
+git subtree split --rejoin --prefix=存放子项目的相对路径 --branch 本地分支名称
 git push subtree地址 本地分支:远程分支
 ```
 
@@ -55,4 +55,7 @@ git push https://github.com/yys-0505/subtree.git subtreeSplitBranch:master
 - 更新subtree后, 也要提交父工程, 然后其他人pull父工程, 可以拿到最新的subtree
 
 # 其他
--  --squash参数表示不拉取历史信息，而只生成一条commit信息。
+- --squash参数表示不拉取历史信息，而只生成一条commit信息。
+- git subtree -h 查看命令
+- fatal:working tree has modifications. Cannot add: 解决：add, pull subtree之前要commit当前工程的修改
+- 第一次提交subtree可能会慢, 从第二次开始正常
