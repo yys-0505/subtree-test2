@@ -7,10 +7,10 @@
     "dev": "vite",
     "build": "vue-tsc && vite build",
     "preview": "vite preview",
-    "st:add": "git subtree add --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch% --%npm_package_config_st-commit%",
-    "st:pull": "git subtree pull --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch% --%npm_package_config_st-commit%",
+    "st:add": "git subtree add --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch%",
+    "st:pull": "git subtree pull --prefix=%npm_package_config_st-prefix% %npm_package_config_st-git% %npm_package_config_st-branch%",
     "st:push": "npm run st:split && npm run st:pushSplit",
-    "st:split": "git subtree split --prefix=%npm_package_config_st-prefix%  --branch %npm_package_config_st-split-branch%",
+    "st:split": "git subtree split --rejoin --prefix=%npm_package_config_st-prefix%  --branch %npm_package_config_st-split-branch%",
     "st:pushSplit": "git push %npm_package_config_st-git% %npm_package_config_st-split-branch%:%npm_package_config_st-branch%"
   },
   "dependencies": {
@@ -26,7 +26,6 @@
     "st-prefix": "src/subtree",
     "st-git": "https://github.com/yys-0505/subtree.git",
     "st-branch": "master",
-    "st-commit": "squash",
     "st-split-branch": "subtreeSplitBranch"
   }
 }
