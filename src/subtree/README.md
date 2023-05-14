@@ -53,3 +53,6 @@ git push https://github.com/yys-0505/subtree.git subtreeSplitBranch:master
 - pull subtree之前要commit当前工程的修改
 - subtree提交后, 要提交父工程, 然后其他人pull父工程可以拿到最新的subtree
 - 更新subtree后, 也要提交父工程, 然后其他人pull父工程, 可以拿到最新的subtree
+
+# 其他
+-  --squash参数表示不拉取历史信息，而只生成一条commit信息。
